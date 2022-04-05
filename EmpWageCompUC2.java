@@ -14,7 +14,7 @@ public class EmpWageCompUC2 {
 			empHrs = 8;
 		else
 			empHrs = 0;
-		empWage = empHrs * EmpRatePerHours;
+		empWage = empHrs * EmpRatePerHour;
 		System.out.println("Employee wage : " + empWage);
 	}
 
