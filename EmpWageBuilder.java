@@ -1,10 +1,11 @@
 package com.bridgelab.Assignment_10;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 /*
  * Author: atik
- * Managing employee Daily wages along with total wages for multiple company 
+ *Employee total wages for multiple company display when queried
  */
 public class EmpWageBuilder implements ICompanyEmpWage {
 //	global variables
@@ -32,9 +33,18 @@ public class EmpWageBuilder implements ICompanyEmpWage {
 			CompanyEmpWage companyEmpWage = companyEmpWageArrayList.get(i);
 
 			int totalEmpWage = this.computeEmpWage(companyEmpWage);
+			System.out.println("Do you want to print total wage of " + companyEmpWage.company);
+			Scanner sc = new Scanner(System.in);
+			String input = sc.next();
+			String check = "yes";
+			if(input.equalsIgnoreCase(check)) {
 			System.out.println("----------------------------------------------------------"
 					+ "\nTotal Employee Wage for Company " + companyEmpWage.company + " is " + totalEmpWage
 					+ " INR\n-----------------------------------------------------------");
+			}
+			else {
+				System.out.println("Thankyou");
+			}
 		}
 	}
 
@@ -80,6 +90,5 @@ public class EmpWageBuilder implements ICompanyEmpWage {
 // 		calling method to compute wages for multiple companies
 		companyEmpWageArray.empWage();
 
-	}
-
+}
 }
