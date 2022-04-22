@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 /*
  * Author: atik
- * Managing employee wages for multiple company using Array List
+ * Managing employee Daily wages along with total wages for multiple company 
  */
 public class EmpWageBuilder implements ICompanyEmpWage {
 //	global variables
